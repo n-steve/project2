@@ -1,0 +1,60 @@
+{
+  "Forex": [
+    {
+      "id": 1,
+      "name": "United States Dollar",
+      "flag": "icons8-usa-48.png",
+
+      "base": "USD"
+    },
+    {
+      "id": 2,
+      "name": "European Dollar",
+      "flag": "icons8-flag-of-europe-48.png",
+
+      "base": "EUR"
+    },
+    {
+      "id": 3,
+      "name": "Japanese Yen",
+      "flag": "icons8-japan-48.png",
+
+      "base": "JPY"
+    },
+    {
+      "id": 4,
+      "name": "Pound Sterling",
+      "flag": "icons8-british-virgin-islands-48.png",
+
+      "base": "GBP"
+    },
+    {
+      "id": 5,
+      "name": "Austrialian Dollar",
+      "flag": "icons8-australia-48.png",
+
+      "base": "AUD"
+    },
+    {
+      "id": 6,
+      "name": "Canadian Dollar",
+      "flag": "icons8-canada-48.png",
+
+      "base": "CAD"
+    },
+    {
+      "id": 7,
+      "name": "Swiss Franc",
+      "flag": "icons8-switzerland-48.png",
+
+      "base": "CHF"
+    },
+    {
+      "id": 8,
+      "name": "New Zealand Dollar",
+      "flag": "icons8-new-zealand-48.png",
+
+      "base": "NZD"
+    }
+  ]
+}
