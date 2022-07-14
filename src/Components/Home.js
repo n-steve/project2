@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
+
 import FrontPage from "./FrontPage";
 
 function Home() {
   const [displayCurrency, setdisplayCurrency] = useState([]);
   const [getRates, setGetRates] = useState([]);
-  const [showRates, setShowRates] = useState();
+  const [showRates, setShowRates] = useState([]);
   const [newData, setNewData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/Forex`)
+    fetch(`http://localhost:3001/forex`)
       .then((r) => r.json())
       .then((data) => setdisplayCurrency(data));
   }, []);
@@ -22,35 +23,35 @@ function Home() {
       });
   }, []);
 
-  useEffect(() => {
-    if (newData.length === 0) {
-      // Loop through my set of data
-      for (const elements of displayCurrency) {
-        let newRate;
+  // useEffect(() => {
+  //   if (newData.length === 0) {
+  //     // Loop through my set of data
+  //     for (const elements of displayCurrency) {
+  //       let newRate;
 
-        // Compare individual currency to its respective rate
-        for (const newElement of getRates) {
-          if (elements.base === newElement) {
-            newRate = showRates[elements.base];
-          }
-        }
+  //       // Compare individual currency to its respective rate
+  //       for (const newElement of getRates) {
+  //         if (elements.base === newElement) {
+  //           newRate = showRates[elements.base];
+  //         }
+  //       }
 
-        // Construct new object with its base and rate so we can do Object.assign
-        const newObj = {
-          base: elements.base,
-          rate: newRate,
-        };
+  //       // Construct new object with its base and rate so we can do Object.assign
+  //       const newObj = {
+  //         base: elements.base,
+  //         rate: newRate,
+  //       };
 
-        // Object.assign
-        const newResult = Object.assign(elements, newObj);
-        setNewData((newData) => [...newData, newResult]);
-      }
-    }
-  }, [displayCurrency]);
+  //       // Object.assign
+  //       const newResult = Object.assign(elements, newObj);
+  //       setNewData((newData) => [...newData, newResult]);
+  //     }
+  //   }
+  // }, [displayCurrency]);
 
   return (
     <div>
-      <FrontPage displayCurrency={newData} getRates={getRates} />
+      <FrontPage displayCurrency={displayCurrency} getRates={getRates} />
     </div>
   );
 }

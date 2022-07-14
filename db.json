@@ -1,60 +1,61 @@
 {
-  "Forex": [
+  "forex": [
     {
       "id": 1,
-      "name": "United States Dollar",
-      "flag": "icons8-usa-48.png",
-
-      "base": "USD"
+      "currency": "1",
+      "base": "EUR",
+      "currency2": "1.042897",
+      "base2": "USD"
     },
     {
       "id": 2,
-      "name": "European Dollar",
-      "flag": "icons8-flag-of-europe-48.png",
-
-      "base": "EUR"
+      "currency": "1",
+      "base": "GBP",
+      "currency2": "1.182771",
+      "base2": "USD"
     },
     {
       "id": 3,
-      "name": "Japanese Yen",
-      "flag": "icons8-japan-48.png",
-
-      "base": "JPY"
+      "currency": "1",
+      "base": "AUD",
+      "currency2": "0.675265",
+      "base2": "USD"
     },
     {
       "id": 4,
-      "name": "Pound Sterling",
-      "flag": "icons8-british-virgin-islands-48.png",
-
-      "base": "GBP"
+      "currency": "1",
+      "base": "NZD",
+      "currency2": "0612865",
+      "base2": "USD"
     },
     {
       "id": 5,
-      "name": "Austrialian Dollar",
-      "flag": "icons8-australia-48.png",
-
-      "base": "AUD"
+      "currency": "1",
+      "base": "USD",
+      "currency2": "1.311912",
+      "base2": "CAD"
     },
     {
       "id": 6,
-      "name": "Canadian Dollar",
-      "flag": "icons8-canada-48.png",
-
-      "base": "CAD"
+      "currency": "1",
+      "base": "USD",
+      "currency2": "0.983518",
+      "base2": "CHF"
     },
     {
       "id": 7,
-      "name": "Swiss Franc",
-      "flag": "icons8-switzerland-48.png",
-
-      "base": "CHF"
+      "currency": "1",
+      "base": "USD",
+      "currency2": "138.980671",
+      "base2": "JPY"
     },
     {
-      "id": 8,
-      "name": "New Zealand Dollar",
-      "flag": "icons8-new-zealand-48.png",
-
-      "base": "NZD"
+      "name": "",
+      "currency": 1,
+      "base": "EUR",
+      "currency2": 1.815966,
+      "base2": "ANG",
+      "id": 8
     }
   ]
 }
