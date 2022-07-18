@@ -1,15 +1,12 @@
 import React from "react";
+import Nav from "./Nav"
 
-import { Outlet, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Link to="/hello">FrontPage</Link>
-      <Link to="/expenses">Convert Currency</Link>
-      <Link to="/profit">Manage Profit & Loss</Link>
-      <Outlet />
-    </div>
+    <div className="ui horizontal pointing menu" style={{position: "fixed"}}>
+      <Nav />
+    </div> 
   );
 }
 

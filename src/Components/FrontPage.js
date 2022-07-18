@@ -19,6 +19,7 @@ function FrontPage({ displayCurrency,  }) {
       <h1>Major Pairs</h1>
 
       {results}
+      
     </div>
   );
 }

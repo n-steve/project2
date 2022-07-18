@@ -50,11 +50,10 @@
       "base2": "JPY"
     },
     {
-      "name": "",
-      "currency": 1,
-      "base": "EUR",
-      "currency2": 1.815966,
-      "base2": "ANG",
+      "currency": "10",
+      "base": "CUP",
+      "currency2": 49.60325,
+      "base2": "ARS",
       "id": 8
     }
   ]

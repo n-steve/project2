@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ConvertPage from "./ConvertPage";
 
 function Conversion() {
-  const [formData, setFormData] = useState();
+
   const [gatherCurrency, setGatherCurrency] = useState([]);
   const [fromCurrency, setFromCurrency] = useState();
   const [toCurrency, setToCurrency] = useState();
@@ -63,7 +63,6 @@ function Conversion() {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        name: "",
         currency: firstCurrency,
         base: fromCurrency,
         currency2:secondCurrency,
@@ -78,7 +77,7 @@ function Conversion() {
 
   return (
     <div>
-      <form>
+     
         Select Currency: $$ Input Amount!
         <div id="first">
           <ConvertPage
@@ -99,7 +98,8 @@ function Conversion() {
             rateChanges={handleSecondChange}
           />
         </div>
-        Submit to Main Page:
+        <form>
+          <h3> Save to Main Page:</h3>
         <button type="submit" onClick={handlePost}>
           Submit
         </button>
@@ -108,73 +108,3 @@ function Conversion() {
   );
 }
 export default Conversion;
-// const [getCurrency, setGetCurrency] = useState([]);
-// const [fromCurrency, setFromCurrency] = useState();
-// const [toCurrency, setToCurrency] = useState();
-// const [currentRate, setCurrentRate] = useState();
-// const [firstSelectAmount, setFirstSelectAmount] = useState(1);
-// const [secondSelectAmount, setSecondSelectAmount] = useState(true);
-
-// useEffect(() => {
-//   fetch(`https://api.exchangerate.host/latest`)
-//     .then((r) => r.json())
-//     .then((data) => {
-//       const displayFirstCurrency = Object.keys(data.rates)[149];
-
-//       setGetCurrency([data.base, ...Object.keys(data.rates)]);
-//       setFromCurrency(data.base);
-//       setToCurrency(displayFirstCurrency);
-//       setCurrentRate(data.rates[displayFirstCurrency]);
-//     });
-// }, []);
-
-// let firstRate;
-// let secondRate;
-
-// if (secondSelectAmount) {
-//   firstRate = firstSelectAmount;
-//   secondRate = firstSelectAmount * currentRate;
-// } else {
-//   secondRate = firstSelectAmount;
-//   firstRate = firstSelectAmount / currentRate;
-// }
-
-// function handleFirstOnChange(event) {
-//   setFirstSelectAmount(event.target.value);
-//   setSecondSelectAmount(true);
-// }
-
-// function handleSecondOnChange(event) {
-//   setFirstSelectAmount(event.target.value);
-//   setSecondSelectAmount(false);
-// }
-// const displayPair = getCurrency.map((data, i) => (
-//   <option key={`${data}-${i}`} value={data}>
-//     {data}
-//   </option>
-// ));
-
-// return (
-//   <div>
-//     <div>
-//       <ConvertPage
-//         getCurrency={displayPair}
-//         selectedCurrency={fromCurrency}
-//         handleChange={(event) => setFromCurrency(event.target.value)}
-//         calculate={firstRate}
-//         handleRateChange={handleFirstOnChange}
-//       />
-//     </div>
-//     =
-//     <div>
-//       <ConvertPage
-//         getCurrency={displayPair}
-//         selectedCurrency={toCurrency}
-//         handleChange={(event) => setToCurrency(event.target.value)}
-//         calculate={secondRate}
-//         handleRateChange={handleSecondOnChange}
-//       />
-//     </div>
-//   </div>
-// );
-// }

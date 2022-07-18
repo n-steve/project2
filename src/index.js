@@ -13,8 +13,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="expenses" element={<Conversion />} />
-          <Route path="hello" element={<Home />} />
+          <Route path="Conversion" element={<Conversion />} />
+          <Route path="Home" element={<Home />} />
           <Route path="profit" element={<PipCalculator />} />
         </Route>
       </Routes>

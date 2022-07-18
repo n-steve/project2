@@ -19,25 +19,3 @@ function ConvertPage({
 }
 export default ConvertPage;
 
-// /*{
-//   getCurrency,
-//   selectedCurrency,
-//   handleChange,
-//   calculate,
-//   handleRateChange,
-// }) {
-//   return (
-//     <div className="ui compact menu">
-//       <div className="ui simple dropdown item">
-//         <input
-//           type="number"
-//           value={calculate.toString()}
-//           onChange={handleRateChange}
-//         />
-//         <select value={selectedCurrency} onChange={handleChange}>
-//           {getCurrency}
-//         </select>
-//       </div>
-//     </div>
-//   );
-// }*/

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 function PipCalculator() {
-  const [userInput, setUserInput] = useState(0.0);
-  const [openPrice, setOpenPrice] = useState(0.0);
-  const [closePrice, setClosePrice] = useState(0.0);
+  const [userInput, setUserInput] = useState(0.01);
+  const [openPrice, setOpenPrice] = useState(0.000001);
+  const [closePrice, setClosePrice] = useState(0.000001);
   const [total, setTotal] = useState(0);
 
   function handleUser(e) {
@@ -27,14 +27,17 @@ function PipCalculator() {
     setTotal(y);
   }
 
-
   return (
-    <form >
+    <form>
+      <h1>Calculate Your Profit or Loss</h1>
+      <p>Enter your Lot size, open price and close price of your trade. </p>
+      <p>Formula: lotsize * (openPrice - closePrice) = Total * Currency Rate </p>
       <table>
         <tbody>
           <tr>
             <td>Lot Size</td>
             <td>Open Price</td>
+
             <td>Close Price</td>
             <td>Total</td>
           </tr>
@@ -59,6 +62,23 @@ function PipCalculator() {
           </tr>
         </tbody>
       </table>
+      <div>
+        <p>
+          {" "}
+          Tip: If you buy or sell in the market, Commonly you would want your
+          closing price to be above or below depending if you buy or sell.
+        </p>
+        Click Link to Learn more about Forex Trading
+        <p>
+          <a href="https://www.babypips.com/learn/forex/tips-for-beginners-forex">
+            Forex Market Trading for Beginners
+          </a>
+        </p>
+        <p>
+          {" "}
+          <a href="https://www.tradingview.com/chart/">Forex Live Markets</a>
+        </p>
+      </div>
     </form>
   );
 }
